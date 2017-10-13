@@ -1,0 +1,86 @@
+Lawson Kennan
+
+uvaid: lck8bq
+
+Help with HTML forms for login and points form. 
+https://www.w3schools.com/html/html_form_elements.asp
+
+Changing CSS based on what user is logged in 
+https://stackoverflow.com/questions/10950734/change-css-value-with-php
+
+AJAX stuff
+https://www.w3schools.com/js/js_ajax_examples.asp
+
+PHP and handling login and logouts
+https://stackoverflow.com/questions/4608182/logout-and-redirecting-session-in-php
+
+Redirecting for site navigating
+https://stackoverflow.com/questions/26722028/javascript-redirect-page-in-the-same-directory-of-my-website
+
+Auto increment field for my database. Point award_id.
+https://www.w3schools.com/sql/sql_autoincrement.asp
+
+Help in deciding what types of ints to use in my database. 
+https://dev.mysql.com/doc/refman/5.7/en/integer-types.html
+
+Database management.
+https://stackoverflow.com/questions/1356866/how-do-i-change-the-data-type-for-a-column-in-mysql
+
+Checking input from form
+http://php.net/manual/en/function.is-integer.php
+
+Checking input from a form
+https://stackoverflow.com/questions/12650802/php-equivalent-of-javascripts-parseint-function
+
+Managing the database while testing stuff
+https://www.w3schools.com/sql/sql_delete.asp
+
+Getting the sum of SQL rows, used to display the total house points
+https://www.w3schools.com/sql/sql_count_avg_sum.asp
+
+Timing functions for updating home page
+https://www.w3schools.com/js/js_timing.asp
+
+Background image stuff
+https://www.w3schools.com/tags/att_body_background.asp
+
+PDO fetch for getting info out of the database
+http://php.net/manual/en/pdostatement.fetch.php
+
+JS refresh. 
+https://stackoverflow.com/questions/29884654/button-that-refresh-page-on-click
+
+Styling buttons and divs.
+https://stackoverflow.com/questions/7560832/how-to-center-a-button-within-a-div
+
+Setting CSS properties with JQuery
+https://www.w3schools.com/jquery/jquery_css.asp
+
+Helped out with choosing colors.
+https://www.w3schools.com/colors/colors_picker.asp?colorhex=ff0000
+
+Extremely helpful with sending HTML Post form as an AJAX request instead of default.
+http://blog.teamtreehouse.com/create-ajax-contact-form
+
+Two sources about dealing with arrays in PHP
+https://www.w3schools.com/php/php_arrays.asp
+https://www.w3schools.com/php/func_array_push.asp
+
+More array stuff.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+Decoding JSON objects. Turns out the AJAX request automatically parses JSON for you. Nice.
+https://www.w3schools.com/js/js_json_parse.asp
+
+Using MySQL dump to submit my database.
+https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
+
+Javascript arrays. Used to aggregate point values.
+https://www.w3schools.com/js/js_arrays.asp
+
+Converting ints to strings to be compatible with the table.
+https://www.w3schools.com/jsref/jsref_tostring_number.asp
+
+--I used Chart.js as my third party feature. Here's the website.--
+http://www.chartjs.org/docs/latest/
+

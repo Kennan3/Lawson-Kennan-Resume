@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Hogwarts House Points Proposal</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <style type="text/css">
+        
+        body {
+            background-color: rgb(250,230,220);
+        }
+        
+        h1 {
+            font-family: cursive;
+            padding:10px;
+            font-size: 50px;
+        }
+        
+        h3 {
+            padding-left: 10px;
+        }
+        
+        p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        img {
+            float: right;
+        }
+        
+        
+    </style>
+    
+  </head>
+  <body>
+    <h1>A New Hogwarts House Points System</h1>
+    
+    <img src="crest.jpg" />
+    
+    <h3>Overview</h3>
+    
+    <p>
+        This project is centered around developing a webpage for logging and keeping track of Hogwarts House Points. In the books, professors can give and take away
+        points from a given Hogwarts House (Gryffindor, Hufflepuff, Ravenclaw, Slytherin), and the results are displayed in hourglasses in the Great Hall. For this web app,
+        users will be able to login, allocate or deallocate points, and view graphical and logged data about the points given.
+    </p>
+    
+    <h3>Features</h3>
+    
+    <p>
+        First, users will be able to create an account and login to the system. The initial page will allow for account registration and account login. Users will need to provide
+        a username, password, and their role at Hogwarts to create an account, and will need their username and password to login to the system. When user's create their account, additional information
+        might be stored, such as their Hogwarts House, favorite character, or favorite book. This additional information could show up in a bonus feature of showing interesting information and statistics about the users. A potential error is a user tries to login
+        with an account that does not exist, or a user incorrectly enters their password. If the user's account doesn't exist, they will be presented with a notification and directed to the
+        registration page. If a user incorrectly enters their password, but the account exists, an appropriate message will display.
+    </p>
+    
+    <p>
+        Once users are logged into the system, the home page will consist of a hub about the Houses, including the members, point totals, and rankings. This home page will serve as the main
+        source of navigation and interaction for the application. The point totals for the Houses will be the first piece of information displayed in a visual representation. Navigation or buttons
+        will allow the user to view stored information about the individual houses, including members and more detailed point information. An additional navigation option will allow users (professors)
+        to enter points for a specific House.
+    </p>
+    
+    <p>
+        When viewing House specific information, the visual information on the page will change. Information displayed in this portion of the app is House specific, so the visuals (graphs, charts, hourglasses etc.)
+        will need to change to reflect that. Options include showing more detailed data and showing House points logged over time. This page will contain a log, most likely in table form,
+        of points given and taken away for that House, what professor gave the points, the point value, the date, and what the reason was for awarding points. The information in this table can be sorted
+        and displayed by those columns. This view will be available for all 4 Houses, and accessible by all users.
+    </p>
+    
+    <p>
+        Finally, certain users will be able to enter House Points. This page will only be accessible by certain user types, so that general users can't game the system and give Gryffindor
+        a bunch of points on the very last day and take away Slytherin's victory. After a user's permission is verified, they will be taken to a form to enter the points information. The information
+        in this form is the same as described above, House, point value, date, professor, and reason. When the form is submitted, the information is stored, and the values and visual representations
+        throughout the application will be updated.
+    </p>
+    
+    <h3>Database Information</h3>
+    
+    <p>
+        The application will make use of one database with multiple tables in it for storing user data. The first table will store all of the users and their relevant information. This users table will
+        contain the username, hashed password, House, role at Hogwarts, and any fun additional information. The primary key for the users table will be the username. A second table will be necessary to store
+        the entries from the form. The second table, called points, will hold the house, point value, professor, date, and reason, with the primary key being house, points, value, and professor. Finally, a third table
+        will be needed to store general data, such as the Houses and their total values. This table may not be needed, and all the data necessary could be computed using the first two tables. Those design decisions will
+        most likely come when the database and tables themselves are first created. The two tables won't have functional
+        dependencies that I can see, but that may come up and need to be handled. 
+    </p>
+    
+    <h3>Requirements and Potential Issues</h3>
+    
+    <p>
+        Below is a list of requirements and associated errors.
+        
+        <ol>
+            <li>Users will be able create an account and login. Potential errors deal with authentication and will be handled with the appropriate redirects or messages. </li>
+            <li>Upon logging in, users will be presented with a home page, showing general information and the current point totals. Issues include having nice looking visuals and getting the data to update accordingly.</li>
+            <li>Users can view more detailed information by clicking on a specific House. Information displayed in a table can be sorted by column on a button click. Similar issues present themselves as the home page.</li>
+            <li>Certain users can access a form to award House points. Once the form is submitted, the rest of the app will be updated accordingly. This continuous updating seems to be an integral, yet difficult, part of the design.</li>
+            <li>Extra fun functionality might pop up if I have time. And tons of Easter Eggs and references and HP quotes.</li>
+            
+        </ol>
+        
+    </p>
+    
+    <h3>Milestone</h3>
+    
+    <p>
+        For the milestone on Wednesday, I'd like to have a basic front-end implemented with my back end mostly finished. Setting up and creating the tables shouldn't be difficult,
+        and I'll need to write a Model, View, and Controller. I'd like to have the back-end fully implemented for the milestone and then focus on front-end/content delivery towards the end,
+        since the back-end is absolutely necessary first. 
+    </p>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

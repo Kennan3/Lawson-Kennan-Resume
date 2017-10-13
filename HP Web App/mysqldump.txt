@@ -1,0 +1,83 @@
+-- MySQL dump 10.13  Distrib 5.7.18, for Linux (x86_64)
+--
+-- Host: localhost    Database: project
+-- ------------------------------------------------------
+-- Server version	5.7.18-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `records`
+--
+
+DROP TABLE IF EXISTS `records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `records` (
+  `award_id` int(11) NOT NULL AUTO_INCREMENT,
+  `house` char(15) NOT NULL,
+  `value` smallint(6) DEFAULT NULL,
+  `professor` varchar(40) NOT NULL,
+  `reason` text,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`award_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `records`
+--
+
+LOCK TABLES `records` WRITE;
+/*!40000 ALTER TABLE `records` DISABLE KEYS */;
+INSERT INTO `records` VALUES (45,'Gryffindor',-10,'Professor Snape','Disruptive in Potions','2017-06-09 00:10:18'),(46,'Hufflepuff',-5,'Professor Snape','Clumsiness','2017-06-09 00:10:30'),(47,'Ravenclaw',-10,'Professor Snape','Wandering the Halls','2017-06-09 00:10:41'),(48,'Slytherin',20,'Professor Snape','Potions Excellence','2017-06-09 00:10:56'),(49,'Gryffindor',20,'Professor McGonagall','Transfiguration Exam Scores','2017-06-09 00:11:40'),(50,'Hufflepuff',10,'Professor McGonagall','Friendship','2017-06-09 00:53:23'),(51,'Ravenclaw',10,'Professor McGonagall','Passing Lots of Exams','2017-06-09 00:57:10'),(52,'Slytherin',-10,'Professor McGonagall','Skipping Class','2017-06-09 00:57:01'),(53,'Gryffindor',15,'Professor Sprout','Mandrake Pulling','2017-06-09 00:57:37'),(55,'Hufflepuff',20,'Professor Sprout','Herbology Class','2017-06-09 00:58:38'),(56,'Ravenclaw',15,'Professor Sprout','Herbology Exam','2017-06-09 00:58:46'),(57,'Slytherin',-5,'Professor Sprout','Goofing Off','2017-06-09 00:58:56'),(58,'Gryffindor',5,'Professor Flitwick','Wingardium Leviosa','2017-06-09 00:59:37'),(59,'Hufflepuff',-5,'Professor Flitwick','Charm Mishap','2017-06-09 00:59:51'),(60,'Ravenclaw',20,'Professor Flitwick','Charms Examination','2017-06-09 01:00:01'),(61,'Slytherin',15,'Professor Flitwick','Cunningness','2017-06-09 01:00:12'),(62,'Hufflepuff',-5,'Professor Flitwick','Late to Class','2017-06-09 01:01:08'),(63,'Gryffindor',-10,'Professor Snape','Quidditch Foul','2017-06-09 01:01:31'),(64,'Ravenclaw',-10,'Professor Snape','Being Excessive Know It Alls','2017-06-09 01:01:47'),(65,'Slytherin',5,'Professor Snape','Tradition','2017-06-09 01:01:57'),(66,'Slytherin',150,'Professor Snape','Quidditch Tournament','2017-06-09 01:18:27'),(67,'Slytherin',-140,'Professor McGonagall','Sneaking Out at Night','2017-06-09 01:20:46');
+/*!40000 ALTER TABLE `records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `username` varchar(40) NOT NULL,
+  `password` char(40) NOT NULL,
+  `first` varchar(40) NOT NULL,
+  `last` varchar(40) NOT NULL,
+  `house` char(15) NOT NULL,
+  `userType` char(10) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('FFlitwick','dcb9c647b7559c362feb5a0a9d1e2ed6574af299','Filius','Flitwick','Ravenclaw','Professor'),('HarryPotter','495ad11c55ac1b40df41680b50eb66849a0bf0b2','Harry','Potter','Gryffindor','Student'),('MMcGonagall','7ab1804551223cd8b502948ef9064e002b59ef95','Minerva','McGonagall','Gryffindor','Professor'),('PSprout','f17ded9743dd20cec3864922869854e21312a2a4','Pomona','Sprout','Hufflepuff','Professor'),('SeverusSnape','e52d52adf4d018f8a53b67641d5247f21f72fc92','Severus','Snape','Slytherin','Professor');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-06-09  1:36:08
